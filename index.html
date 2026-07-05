@@ -212,39 +212,10 @@
 			flex: 1 1 280px;
 		}
 
-		form.signup {
-			display: flex;
-			flex-direction: column;
-			gap: 10px;
-		}
-
-		form.signup input[type="email"] {
-			padding: 12px 14px;
-			border: 1.5px solid var(--borde);
-			border-radius: 8px;
-			font-size: 1rem;
-		}
-
-		form.signup button {
-			border: none;
-			cursor: pointer;
-			font-family: inherit;
-		}
-
 		.form-note {
 			font-size: 0.8rem;
 			color: var(--gris);
 			margin-top: 8px;
-		}
-
-		.form-success {
-			display: none;
-			background: #eef7ee;
-			border: 1px solid #cfe8cf;
-			color: #2c5c2c;
-			padding: 10px 14px;
-			border-radius: 8px;
-			font-size: 0.9rem;
 		}
 
 		/* Footer */
@@ -296,6 +267,26 @@
 		</div>
 	</section>
 
+	<section class="block" id="guia">
+		<div class="wrap">
+			<div class="guide-box">
+				<div class="text">
+					<span class="badge-soon">Muy pronto</span>
+					<h2>Guía gratuita en PDF</h2>
+					<p>
+						Estoy terminando una guía descargable con todo lo que necesitas para planear
+						tu viaje a Japón: itinerarios, tips y checklist. Déjame tu email y te aviso
+						apenas esté lista (¡serás de las primeras personas en tenerla!).
+					</p>
+				</div>
+				<div class="form-area">
+					<script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="67729e61-d27a-4ac6-a427-899b0ca63023"></script>
+					<p class="form-note">Sin spam. Solo te escribo cuando la guía esté lista.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="block" id="recursos">
 		<div class="wrap">
 			<h2>Recursos recomendados</h2>
@@ -337,38 +328,6 @@
 		</div>
 	</section>
 
-	<section class="block" id="guia">
-		<div class="wrap">
-			<div class="guide-box">
-				<div class="text">
-					<span class="badge-soon">Muy pronto</span>
-					<h2>Guía gratuita en PDF</h2>
-					<p>
-						Estoy terminando una guía descargable con todo lo que necesitas para planear
-						tu viaje a Japón: itinerarios, tips y checklist. Déjame tu email y te aviso
-						apenas esté lista (¡serás de las primeras personas en tenerla!).
-					</p>
-				</div>
-				<div class="form-area">
-					<!--
-						TODO_BEEHIIV: reemplaza este formulario por el código de embed que te da Beehiiv
-						(Beehiiv > Audience > Subscribe forms > Embed). Normalmente es un <iframe>.
-						Mientras tanto, este formulario placeholder solo muestra un mensaje de
-						confirmación visual y NO envía el email a ningún lado todavía.
-					-->
-					<form class="signup" id="signup-form">
-						<input type="email" name="email" placeholder="tu@email.com" required>
-						<button type="submit" class="btn">Avísenme cuando esté lista</button>
-					</form>
-					<div class="form-success" id="signup-success">
-						¡Listo! (Recuerda conectar este formulario a Beehiiv para que el email se guarde de verdad)
-					</div>
-					<p class="form-note">Sin spam. Solo te escribo cuando la guía esté lista.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<footer>
 		<div class="wrap">
 			<div class="socials">
@@ -380,15 +339,5 @@
 			<p>Hecho con ❤️ para quienes sueñan con viajar a Japón.</p>
 		</div>
 	</footer>
-
-	<script>
-		// Placeholder de confirmación visual. Elimina este script al conectar el
-		// formulario real de Beehiiv (su embed maneja el envío por su cuenta).
-		document.getElementById('signup-form').addEventListener('submit', function (e) {
-			e.preventDefault();
-			document.getElementById('signup-success').style.display = 'block';
-			this.reset();
-		});
-	</script>
 </body>
 </html>
